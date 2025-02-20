@@ -10,8 +10,8 @@ import (
 	"github.com/bhagyashriw777/tty2web/backend/localcommand"
 	"github.com/bhagyashriw777/tty2web/server"
 
-	reverseproxy "github.com/bhagyashriw777/tty2web/agent/reverse_proxy"
-	vscode "github.com/bhagyashriw777/tty2web/executer"
+	reverseproxy "github.com/bhagyashriw777/vrepo/agent/reverse_proxy"
+	vscode "github.com/bhagyashriw777/vrepo/executer"
 )
 
 // Init initializes the agent.
