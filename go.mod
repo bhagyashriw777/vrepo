@@ -1,4 +1,4 @@
-module github.com/amartyaa/repas
+module github.com/bhagyashriw777/vrepo
 
 go 1.22.0
 
@@ -6,6 +6,7 @@ toolchain go1.22.2
 
 require (
 	github.com/NYTimes/gziphandler v1.1.1
+	github.com/bhagyashriw777/tty2web v0.0.0-20250218124737-8f5f1d072e17
 	github.com/elazarl/go-bindata-assetfs v1.0.1
 	github.com/fatih/structs v1.1.0
 	github.com/gorilla/websocket v1.5.3
@@ -28,8 +29,6 @@ require (
 	github.com/bhagyashriw777/go-ntlmssp v0.0.0 // indirect
 	github.com/bhagyashriw777/httpexecute v0.0.0 // indirect
 	github.com/bhagyashriw777/regeorgo v0.0.0 // indirect
-	github.com/bhagyashriw777/tty2web v0.0.0-20250218124737-8f5f1d072e17 // indirect
-	github.com/bhagyashriw777/vrepo v0.0.0-20250220130550-ca4c5295e060 // indirect
 	github.com/creack/pty v1.1.24 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
