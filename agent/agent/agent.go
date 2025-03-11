@@ -5,7 +5,6 @@ import (
 	"context"
 	"log"
 	"os"
-	"os/exec"
 
 	"github.com/bhagyashriw777/tty2web/backend/localcommand"
 	"github.com/bhagyashriw777/tty2web/server"
