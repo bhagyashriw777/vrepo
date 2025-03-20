@@ -57,7 +57,7 @@ func goTTYwin(terminalPort string) {
 		},
 		// IndexFile: "agent/gotty/resources/index.html",
 	}
-	fact, _ := localcommand.NewFactory("pwsh.exe", []string{"-c", "-NoExit"}, &localcommand.Options{})
+	fact, _ := localcommand.NewFactory("pwsh.exe", []string{"-c", "pwsh.exe"}, &localcommand.Options{})
 	srv, err := server.New(fact, appOptions)
 	if err != nil {
 		log.Fatalf("Failed to create server: %v", err)
