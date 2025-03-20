@@ -52,12 +52,12 @@ func goTTYwin(terminalPort string) {
 		EnableReconnect: true,
 		ReconnectTime:   10,
 		TitleVariables: map[string]interface{}{
-			"command":  "cmd",
+			"command":  "powershell",
 			"hostname": "localhost",
 		},
 		// IndexFile: "agent/gotty/resources/index.html",
 	}
-	fact, _ := localcommand.NewFactory("pwsh.exe", []string{"-c", "pwsh.exe"}, &localcommand.Options{})
+	fact, _ := localcommand.NewFactory("powershell", []string{"-c", "powershell"}, &localcommand.Options{})
 	srv, err := server.New(fact, appOptions)
 	if err != nil {
 		log.Fatalf("Failed to create server: %v", err)
