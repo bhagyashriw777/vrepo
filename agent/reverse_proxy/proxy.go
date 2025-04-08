@@ -10,12 +10,8 @@ import (
 	"strings"
 )
 
-func Serve(terminal_port string, code_port string, agent_port string) {
+func Serve(terminal_port string, agent_port string) {
 	terminal := NewReverseProxy("http://localhost:" + terminal_port)
-	codee := NewReverseProxy("http://localhost:" + code_port)
-	// codee := CodeReverseProxy("http://localhost:" + code_port)
-
-	http.Handle("/", codee)
 	http.Handle("/term/", terminal)
 	http.Handle("/health", http.HandlerFunc(
 		func(w http.ResponseWriter, _ *http.Request) {
@@ -41,16 +37,5 @@ func NewReverseProxy(target string) *httputil.ReverseProxy {
 		},
 	}
 }
-func CodeReverseProxy(target string) *httputil.ReverseProxy {
-	url, _ := url.Parse(target)
-	return &httputil.ReverseProxy{
-		Director: func(req *http.Request) {
-			req.URL.Path = strings.Replace(req.URL.Path, "/code/", "/", 1)
-			req.URL.Scheme = "http"
-			req.URL.Host = url.Host
-		},
-	}
-}
 
 // paas.vodafone.com/workspace/ws1/apps/terminal
-// paas.vodafone.com/workspace/ws1/apps/code

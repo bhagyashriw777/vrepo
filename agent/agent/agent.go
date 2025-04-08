@@ -16,31 +16,17 @@ import (
 // Init initializes the agent.
 func Init(apps []string) {
 
-	terminalPort := "8000"
-	codePort := "3000"
-	agentPort := "9000"
+	terminalPort := "9000"
+	agentPort := "8000"
 	if os.Getenv("TERMINAL_PORT") != "" {
 		terminalPort = os.Getenv("TERMINAL_PORT")
-	}
-	if os.Getenv("CODE_PORT") != "" {
-		codePort = os.Getenv("CODE_PORT")
 	}
 	if os.Getenv("AGENT_PORT") != "" {
 		agentPort = os.Getenv("AGENT_PORT")
 	}
-	var val string
-	for _, val = range apps {
-		switch val {
-		case "code":
-			vscode.Install()
-			vscode.Start(codePort)
-			// case "term":
-			// 	fmt.Println("Terminal")
-		}
-	}
 
 	go goTTYwin(terminalPort)
-	reverseproxy.Serve(terminalPort, codePort, agentPort)
+	reverseproxy.Serve(terminalPort, agentPort)
 
 }
 func goTTYwin(terminalPort string) {
