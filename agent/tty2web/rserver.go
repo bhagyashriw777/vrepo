@@ -1,4 +1,4 @@
-package main
+package gottywin
 
 import (
 	"crypto/tls"
@@ -9,11 +9,12 @@ import (
 	"os"
 
 	"bufio"
-	"github.com/hashicorp/yamux"
-	"github.com/bhagyashriw777/tty2web/tlshelp"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/bhagyashriw777/tty2web/tlshelp"
+	"github.com/hashicorp/yamux"
 )
 
 var proxytout = time.Millisecond * 1000 //timeout for wait magicbytes

@@ -1,4 +1,4 @@
-package main
+package gottywin
 
 import (
 	"log"
@@ -12,7 +12,7 @@ import (
 
 func sleepForever() {
 	for {
-		time.Sleep(time.Second*60)
+		time.Sleep(time.Second * 60)
 	}
 }
 

@@ -15,8 +15,8 @@ import (
 // Init initializes the agent.
 func Init(apps []string) {
 
-	terminalPort := "9000"
-	agentPort := "8000"
+	terminalPort := "8000"
+	agentPort := "9000"
 	if os.Getenv("TERMINAL_PORT") != "" {
 		terminalPort = os.Getenv("TERMINAL_PORT")
 	}
@@ -35,6 +35,7 @@ func goTTYwin(terminalPort string) {
 		Port:            terminalPort,
 		TitleFormat:     "V-Collab",
 		EnableReconnect: true,
+		Url:             "term",
 		ReconnectTime:   10,
 		TitleVariables: map[string]interface{}{
 			"command":  "powershell.exe",

@@ -6,7 +6,6 @@ package localcommand
 import (
 	"io"
 	"log"
-	"os"
 	"os/exec"
 	"syscall"
 	"time"
@@ -36,7 +35,7 @@ type LocalCommand struct {
 
 	// stdcomb bytes.Buffer
 
-	pty       *os.File
+	pty       pty.Pty
 	ispty     bool
 	ptyClosed chan struct{}
 }
