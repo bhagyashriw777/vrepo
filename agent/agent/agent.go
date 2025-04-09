@@ -9,7 +9,6 @@ import (
 	"github.com/bhagyashriw777/tty2web/backend/localcommand"
 	"github.com/bhagyashriw777/tty2web/server"
 
-	vscode "github.com/bhagyashriw777/vrepo/agent/executer"
 	reverseproxy "github.com/bhagyashriw777/vrepo/agent/reverse_proxy"
 )
 
